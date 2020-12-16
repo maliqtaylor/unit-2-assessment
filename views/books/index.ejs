@@ -1,0 +1,44 @@
+<%- include('../partials/header') %>
+
+  <h1>Book List</h1>
+
+  <% if(books.length> 0){%>
+    <%books.forEach((b)=> { %>
+      <div class="container">
+        <a href="/books/<%=b._id%>">
+          <p>
+            <%=b.name %>
+          </p>
+        </a>
+
+        <p class="divider">
+          |
+        </p>
+
+        <p>
+          <%= b.read ? 'Read' : 'Not Read' %>
+        </p>
+
+        <p class="divider">
+          |
+        </p>
+
+        <form action="/books/<%= b._id %>?_method=DELETE" method="POST">
+          <button type="submit">Delete</button>
+        </form>
+
+
+      </div>
+      <% }); %>
+        <% }else{ %>
+          <div class="container">
+            <p> No Books Yet...</p>
+          </div>
+          <% } %>
+
+
+            <hr class="solid">
+
+            <%- include('./new.ejs') %>
+
+              <%- include('../partials/footer') %>

@@ -1,0 +1,36 @@
+body {
+  padding: 50px;
+  font: "Lucida Grande", Helvetica, Arial, sans-serif;
+  text-align: center;
+}
+
+a {
+  color: #00B7FF;
+  text-decoration: none;
+}
+
+button{
+  background-color: white;
+  border: none;
+  color: red;
+}
+
+hr.solid {
+  border-top: 3px solid #bbb;
+}
+
+:root {
+ font-size: 98.5%
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.divider{
+  margin: 3px;
+}
+
